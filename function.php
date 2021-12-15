@@ -24,7 +24,7 @@
         $re = array();
         array_push($re, 0);     // $re[0] = result num
         while($row = fgetcsv($f)) {
-            if (strpos($row[0], $name) !== false) {       // $row[0] == name, $row[1] == num, $row[2] == CBDB
+            if (strpos(strtolower($row[0]), strtolower($name)) !== false && $row[0] != "500 internal server error") {       // $row[0] == name, $row[1] == num, $row[2] == CBDB
                 $cur = array();
                 array_push($cur, $row[0]);
                 array_push($cur, str_pad($row[1], 6, '0', STR_PAD_LEFT));
