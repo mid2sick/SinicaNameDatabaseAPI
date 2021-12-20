@@ -59,10 +59,10 @@
     function getBasicInformation($content) {
         $fetchData = array();
 
-        array_push($fetchData, searchRow($content, "朝代", $fetchData));
-        array_push($fetchData, searchRow($content, "性別", $fetchData));
-        array_push($fetchData, searchRow($content, "中曆生卒", $fetchData));
-        array_push($fetchData, searchRow($content, "西曆生卒", $fetchData));
+        array_push($fetchData, searchRow($content, "朝代"));
+        array_push($fetchData, searchRow($content, "性別"));
+        array_push($fetchData, searchRow($content, "中曆生卒"));
+        array_push($fetchData, searchRow($content, "西曆生卒"));
 
         return $fetchData;
     }
